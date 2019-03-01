@@ -13,5 +13,6 @@ struct User {
 }
 
 struct AuthUser {
-    
+    public let id: String
+    public let email: String
 }

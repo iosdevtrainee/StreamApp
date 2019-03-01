@@ -7,12 +7,14 @@
 //
 
 import Foundation
-
+//import FirebaseStorage
 final class StorageManager {
     private init () { }
     public static var shared = StorageManager()
-    
-    public func store(data:Data) {
+    private lazy var rootRef =
+    public func store(data:Data, user:AuthUser) {
         
     }
+    
+    private
 }
