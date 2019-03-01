@@ -27,6 +27,7 @@
 		D7B7E5362229DD4C00FEB6A4 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B7E5352229DD4C00FEB6A4 /* DatabaseManager.swift */; };
 		D7B7E5382229DDE300FEB6A4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B7E5372229DDE300FEB6A4 /* NetworkManager.swift */; };
 		D7B7E53A2229DE7900FEB6A4 /* VideoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B7E5392229DE7900FEB6A4 /* VideoAPIClient.swift */; };
+		D7FEB52D2229ED34004C77C6 /* FirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FEB52C2229ED34004C77C6 /* FirebaseError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		D7B7E5352229DD4C00FEB6A4 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		D7B7E5372229DDE300FEB6A4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D7B7E5392229DE7900FEB6A4 /* VideoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAPIClient.swift; sourceTree = "<group>"; };
+		D7FEB52C2229ED34004C77C6 /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,6 @@
 				9B7900EE5ED477527D2D985D /* Pods-flow.debug.xcconfig */,
 				A0A60204C6F795C428843277 /* Pods-flow.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -167,6 +168,7 @@
 			children = (
 				D7B7E5332229DCC900FEB6A4 /* StorageManager.swift */,
 				D7B7E5352229DD4C00FEB6A4 /* DatabaseManager.swift */,
+				D7FEB52C2229ED34004C77C6 /* FirebaseError.swift */,
 			);
 			path = "Firebase Utilities";
 			sourceTree = "<group>";
@@ -320,6 +322,7 @@
 				D7B7E5382229DDE300FEB6A4 /* NetworkManager.swift in Sources */,
 				D7B7E5092229D6B900FEB6A4 /* AppDelegate.swift in Sources */,
 				D7B7E5342229DCC900FEB6A4 /* StorageManager.swift in Sources */,
+				D7FEB52D2229ED34004C77C6 /* FirebaseError.swift in Sources */,
 				D7B7E53A2229DE7900FEB6A4 /* VideoAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

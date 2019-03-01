@@ -7,8 +7,15 @@
 //
 
 import Foundation
-
+import FirebaseFirestore
 final class DatabaseManager {
     private init () { }
-//    public static var fireStore = Fire
+    public static var fireStore: Firestore = {
+        let db = Firestore.firestore()
+        db.settings.isSSLEnabled = true
+        return db
+    }()
+    
+    
+    
 }
