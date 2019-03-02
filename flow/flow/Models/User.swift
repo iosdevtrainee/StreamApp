@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct User: FirebaseConvertible, Identifiable {
-    var id: String
-    
+struct User: FirebaseStorable, Identifiable {
+    public var id: String
+    public let collection: Collection = .user
     func convert() -> [String : String] {
         return ["id":self.id,
                 "":self.id,
@@ -25,20 +25,7 @@ struct User: FirebaseConvertible, Identifiable {
     
 }
 
-struct AuthUser: FirebaseConvertible, Identifiable {
-    var id: String
-    
-    func convert() -> [String : String] {
-        return ["id":self.id,
-                "":self.id,
-                "":self.id,
-                "":self.id,
-                "":self.id,
-                "":self.id,
-                "":self.id,
-                "":self.id]
-    }
-    
-//    public let id: String
+struct AuthUser {
+    public let id: String
     public let email: String
 }

@@ -11,4 +11,9 @@ import Foundation
 enum FirebaseError: Error {
     case storageUploadError(String)
     case signOutError(Error)
+    case createDocumentError(Error)
+    case updateDocumentError(Error)
+    case fetchDocumentError(Error)
+    case noDocumentError(String)
+    case deleteDocumentError(Error)
 }

@@ -8,8 +8,10 @@
 
 import Foundation
 
-struct Video: FirebaseConvertible, Identifiable {
-    var id: String
+struct Video: FirebaseStorable, Identifiable {
+    var collection: Collection = .video
+    public var id: String
+    public let videoURL: String
     
     func convert() -> [String : String] {
         return ["id":self.id,
@@ -25,9 +27,9 @@ struct Video: FirebaseConvertible, Identifiable {
     
 }
 
-struct Playlist: FirebaseConvertible, Identifiable {
-    var id: String
-    
+struct Playlist: FirebaseStorable, Identifiable {
+    public var id: String
+    public let collection: Collection = .playlist
     func convert() -> [String : String] {
         return ["id":self.id,
                 "":self.id,
@@ -42,9 +44,9 @@ struct Playlist: FirebaseConvertible, Identifiable {
     
 }
 
-struct Channel: FirebaseConvertible, Identifiable {
-    var id: String
-    
+struct Channel: FirebaseStorable, Identifiable {
+    public var id: String
+    public let collection: Collection = .channel
     func convert() -> [String : String] {
         return ["id":self.id,
                 "":self.id,
