@@ -8,11 +8,37 @@
 
 import Foundation
 
-struct User {
+struct User: FirebaseConvertible, Identifiable {
+    var id: String
+    
+    func convert() -> [String : String] {
+        return ["id":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id]
+    }
+    
     
 }
 
-struct AuthUser {
-    public let id: String
+struct AuthUser: FirebaseConvertible, Identifiable {
+    var id: String
+    
+    func convert() -> [String : String] {
+        return ["id":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id]
+    }
+    
+//    public let id: String
     public let email: String
 }

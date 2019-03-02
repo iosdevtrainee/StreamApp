@@ -8,14 +8,53 @@
 
 import Foundation
 
-struct Video {
+struct Video: FirebaseConvertible, Identifiable {
+    var id: String
+    
+    func convert() -> [String : String] {
+        return ["id":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id]
+    }
+    
     
 }
 
-struct Playlist {
+struct Playlist: FirebaseConvertible, Identifiable {
+    var id: String
+    
+    func convert() -> [String : String] {
+        return ["id":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id]
+    }
+    
     
 }
 
-struct Channel {
+struct Channel: FirebaseConvertible, Identifiable {
+    var id: String
+    
+    func convert() -> [String : String] {
+        return ["id":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id,
+                "":self.id]
+    }
+    
     
 }

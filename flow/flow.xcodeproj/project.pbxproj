@@ -28,6 +28,8 @@
 		D7B7E5382229DDE300FEB6A4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B7E5372229DDE300FEB6A4 /* NetworkManager.swift */; };
 		D7B7E53A2229DE7900FEB6A4 /* VideoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B7E5392229DE7900FEB6A4 /* VideoAPIClient.swift */; };
 		D7FEB52D2229ED34004C77C6 /* FirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FEB52C2229ED34004C77C6 /* FirebaseError.swift */; };
+		D7FEB52F2229F62F004C77C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7FEB52E2229F62F004C77C6 /* GoogleService-Info.plist */; };
+		D7FEB5312229F6F2004C77C6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FEB5302229F6F2004C77C6 /* SessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		D7B7E5372229DDE300FEB6A4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D7B7E5392229DE7900FEB6A4 /* VideoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAPIClient.swift; sourceTree = "<group>"; };
 		D7FEB52C2229ED34004C77C6 /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
+		D7FEB52E2229F62F004C77C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D7FEB5302229F6F2004C77C6 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 				D7B7E50C2229D6B900FEB6A4 /* Main.storyboard */,
 				D7B7E50F2229D6BB00FEB6A4 /* Assets.xcassets */,
 				D7B7E5112229D6BB00FEB6A4 /* LaunchScreen.storyboard */,
+				D7FEB52E2229F62F004C77C6 /* GoogleService-Info.plist */,
 				D7B7E5142229D6BB00FEB6A4 /* Info.plist */,
 			);
 			path = flow;
@@ -169,6 +174,7 @@
 				D7B7E5332229DCC900FEB6A4 /* StorageManager.swift */,
 				D7B7E5352229DD4C00FEB6A4 /* DatabaseManager.swift */,
 				D7FEB52C2229ED34004C77C6 /* FirebaseError.swift */,
+				D7FEB5302229F6F2004C77C6 /* SessionManager.swift */,
 			);
 			path = "Firebase Utilities";
 			sourceTree = "<group>";
@@ -234,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7B7E5132229D6BB00FEB6A4 /* LaunchScreen.storyboard in Resources */,
+				D7FEB52F2229F62F004C77C6 /* GoogleService-Info.plist in Resources */,
 				D7B7E5102229D6BB00FEB6A4 /* Assets.xcassets in Resources */,
 				D7B7E50E2229D6B900FEB6A4 /* Main.storyboard in Resources */,
 			);
@@ -309,6 +316,7 @@
 			files = (
 				D7B7E51C2229D7F000FEB6A4 /* LoginView.swift in Sources */,
 				D7B7E52A2229DC0C00FEB6A4 /* ChannelViewController.swift in Sources */,
+				D7FEB5312229F6F2004C77C6 /* SessionManager.swift in Sources */,
 				D7B7E52C2229DC1800FEB6A4 /* AuthViewController.swift in Sources */,
 				D7B7E50B2229D6B900FEB6A4 /* ViewController.swift in Sources */,
 				D7B7E5202229D81E00FEB6A4 /* ChannelsView.swift in Sources */,
@@ -476,7 +484,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.superapiguy.flow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.superapiguy.streamapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -494,7 +502,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.superapiguy.flow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.superapiguy.streamapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

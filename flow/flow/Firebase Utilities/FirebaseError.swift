@@ -10,4 +10,5 @@ import Foundation
 
 enum FirebaseError: Error {
     case storageUploadError(String)
+    case signOutError(Error)
 }
