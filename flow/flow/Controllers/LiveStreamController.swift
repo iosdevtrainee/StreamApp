@@ -44,7 +44,7 @@ class LiveStreamController: UIViewController {
     //MARK: - Event
     func startStream(session:LFLiveSession?) {
         let stream = LFLiveStreamInfo()
-        stream.url = "rtmp://trucolors.org/live";
+        stream.url = "Enter Live Stream URL HERE"
         session?.startLive(stream)
     }
     
