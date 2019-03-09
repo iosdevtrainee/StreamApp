@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/dev/Desktop/stream_app/flow/flow/Views/VideoCell.swift">
+   </FileRef>
+   <FileRef
       location = "group:flow.xcodeproj">
    </FileRef>
    <FileRef

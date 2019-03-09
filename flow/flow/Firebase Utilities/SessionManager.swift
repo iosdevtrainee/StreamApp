@@ -33,8 +33,9 @@ final class SessionManager {
     public weak var accountDelegate: AccountCreationDelegate?
     public weak var signInDelegate: SignInDelegate?
     public weak var signOutDelegate: SignOutDelegate?
+    private var user: User?
     
-    public var currentUser: AuthUser? {
+    public var currentAuthUser: AuthUser? {
         guard let user = Auth.auth().currentUser,
             let email = user.email else {
             return nil
@@ -42,12 +43,19 @@ final class SessionManager {
         return AuthUser(id:user.uid, email:email)
     }
     
+    public var currentUser: User? {
+        return user
+    }
+    
     public func createUser(email:String, password:String){
         Auth.auth().createUser(withEmail: email, password: password) { (authData, error) in
-            if let authResult = authData {
-//                DatabaseManager.shared.create(type: <#FireStoreType#>, instance: FireStoreType.user)
-                
-                
+            if let error = error {
+                let fireBaseError = FirebaseError.accountCreationError(error)
+                self.accountDelegate?.sessionManager(self, didReceiveError: fireBaseError)
+            } else if let authResult = authData, let email = authResult.user.email {
+                let user = authResult.user
+                let authUser = AuthUser(id:user.uid, email:email)
+                self.accountDelegate?.sessionManager(self, didCreateUser: authUser)
             }
         }
     }
@@ -60,6 +68,4 @@ final class SessionManager {
             signOutDelegate?.sessionManager(self, didReceiveError: FirebaseError.signOutError(error))
         }
     }
-    
-    
 }

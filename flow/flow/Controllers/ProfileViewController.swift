@@ -10,21 +10,44 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var createButton: UIButton!
+    @IBOutlet weak var allDocuments: UITextView!
+    @IBOutlet weak var welcomeLabel: UILabel!
+    public var user:AuthUser?
+    @IBOutlet weak var usernameTextField: UITextField!
+    convenience init(user:AuthUser){
+        self.init()
+        self.user = user
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let aUser = user {
+            welcomeLabel.text = "Welcome user with email \(aUser.email)"
+        }
+        DatabaseManager.shared.delegate = self
     }
-    */
+    @IBAction func makeDocument(_ sender: UIButton) {
+        
+    }
+    @IBAction func updateDocument(_ sender: UIButton) {
+        DatabaseManager.shared.fetchAll(collection: .user)
+    }
+    
+}
 
+extension ProfileViewController: DatabaseManagerDelegate {
+    func databaseManager(_ databaseManager: DatabaseManager, didReceiveError error: FirebaseError) {
+        print(error.localizedDescription)
+    }
+    func databaseManager(_ databaseManager: DatabaseManager, willCreateDocument id: DocumentID) {
+        print("Created User")
+        user?.id = id
+    }
+    func databaseManager(_ databaseManager: DatabaseManager, didUpdateDocument id: DocumentID) {
+        print("Updated Document")
+    }
+    func databaseManager(_ databaseManager: DatabaseManager, didReceiveDocuments documents: [Document]) {
+        allDocuments.text = documents.map { $0.data.description }.joined()
+    }
 }

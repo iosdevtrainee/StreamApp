@@ -16,4 +16,5 @@ enum FirebaseError: Error {
     case fetchDocumentError(Error)
     case noDocumentError(String)
     case deleteDocumentError(Error)
+    case accountCreationError(Error)
 }

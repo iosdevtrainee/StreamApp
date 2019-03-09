@@ -1,15 +1,16 @@
 //
-//  ChannelsView.swift
+//  SubmitVideoView.swift
 //  flow
 //
-//  Created by iosdevrookie on 3/1/19.
+//  Created by iosdevrookie on 3/3/19.
 //  Copyright © 2019 iosdevrookie. All rights reserved.
 //
 
 import UIKit
 
-class ChannelsView: UIView {
+class SubmitVideoView: UIView {
 
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
@@ -26,7 +27,7 @@ class ChannelsView: UIView {
     
 }
 
-extension ChannelsView {
+extension SubmitVideoView {
     private func setupView(){
         
     }
@@ -35,4 +36,3 @@ extension ChannelsView {
         
     }
 }
-

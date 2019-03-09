@@ -11,5 +11,7 @@ import Foundation
 final class NetworkManager {
     private init () { }
     public static var shared = NetworkManager()
-    
+    public func fetch(url:URL){
+        
+    }
 }

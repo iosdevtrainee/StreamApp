@@ -9,13 +9,49 @@
 import UIKit
 
 class LoginView: UIView {
+    
+    public lazy var emailTextField: UITextField = {
+       let tf = UITextField()
+        tf.placeholder = "email"
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+        return tf
+    }()
+    
+    public lazy var passwordTextField: UITextField = {
+        let tf = UITextField()
+        tf.placeholder = "password"
+        tf.isSecureTextEntry = true
+        return tf
+    }()
+    
+    public lazy var loginButton: UIButton = {
+       let btn = UIButton()
+       btn.setTitle("Login", for: .normal)
+        return btn
+    }()
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
     }
-    */
+    
+    override init(frame: CGRect) {
+        super.init(frame:frame)
+        commonInit()
+    }
+    
+    private func commonInit(){
+        
+    }
 
+}
+
+extension LoginView {
+    private func setupView(){
+        
+    }
+    
+    private func setConstraints(){
+        
+    }
 }

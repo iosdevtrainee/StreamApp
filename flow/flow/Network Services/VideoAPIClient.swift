@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+protocol VideoAPIClientDelegate {
+    func didReceiveData()
+    
+}
+
+final class VideoAPIClient {
+    public func fetchVideo(video:Video){
+        NetworkManager.shared.fetch(url:video.url)
+    }
+}
